@@ -74,16 +74,12 @@ npm run dev
 
 Sem configurar nada, o app abre em **modo demonstração**: os registros ficam no `localStorage` do navegador, com quatro exemplos simulados.
 Configurado a API, os registros ficam no network - fetch do navegador configurados como registros
-## Configurar a API externa (MockAPI.io)
 
-1. Crie uma conta em https://mockapi.io e um novo projeto.
-2. Crie o recurso `registros` com os campos: `local` (string), `sensacao` (string), `cuidado` (string), `temperatura` (number), `umidade` (number), `observacao` (string), `criadoEm` (string).
-3. Copie a URL base do projeto, por exemplo https://xxxxxxxx.mockapi.io/api/v1.
-4. Copie `.env.example` para `.env` e preencha:
-   
-   VITE_API_URL= https://6af69156e844c7ff741b7530.mockapi.io/api/v1/registros
-   
-   5. Rode de novo `npm run dev`. O aviso de modo demonstração some.
+## Link API 
+
+https://6af69156e844c7ff741b7530.mockapi.io/api/v1/registros
+
+
 
 ## Deploy (Vercel)
 
