@@ -78,18 +78,16 @@ Configurado a API, os registros ficam no network - fetch do navegador configurad
 
 1. Crie uma conta em https://mockapi.io e um novo projeto.
 2. Crie o recurso `registros` com os campos: `local` (string), `sensacao` (string), `cuidado` (string), `temperatura` (number), `umidade` (number), `observacao` (string), `criadoEm` (string).
-3. Copie a URL base do projeto, por exemplo `https://6af69156e844c7ff741b7530.mockapi.io/api/v1/registros`.
+3. Copie a URL base do projeto, por exemplo https://xxxxxxxx.mockapi.io/api/v1.
 4. Copie `.env.example` para `.env` e preencha:
-   ```
-   VITE_API_URL=https://xxxxxxxx.mockapi.io/api/v1
-   ```
-5. Rode de novo `npm run dev`. O aviso de modo demonstração some.
+   
+   VITE_API_URL= https://6af69156e844c7ff741b7530.mockapi.io/api/v1/registros
+   
+   5. Rode de novo `npm run dev`. O aviso de modo demonstração some.
 
 ## Deploy (Vercel)
 
-1. Suba o projeto no GitHub e importe o repositório na Vercel (preset Vite).
-2. Em *Settings > Environment Variables*, adicione `VITE_API_URL` com a URL da MockAPI.
-3. Faça o deploy e coloque o link na entrega.
+ https://gs-2-dvoxten46-bruno-61f3.vercel.app
 
 ## Acessibilidade e privacidade
 
