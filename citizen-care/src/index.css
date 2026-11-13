@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 17px;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-mist font-sans text-ink antialiased;
+  }
+
+  /* foco bem visível para quem navega pelo teclado */
+  :focus-visible {
+    outline: 3px solid #1b5e73;
+    outline-offset: 2px;
+  }
+
+  section[id] {
+    scroll-margin-top: 1rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    * {
+      transition: none !important;
+    }
+  }
+}
