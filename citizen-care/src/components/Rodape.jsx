@@ -4,10 +4,9 @@ export default function Rodape() {
       <div className="mx-auto max-w-6xl space-y-1 px-5 py-8 text-base">
         <p className="font-bold">Citizen Care</p>
         <p>
-          Projeto da Global Solution 2026.2 da FIAP, Engenharia de Software. Conectado ao ODS 3, Saúde e Bem-estar.
+          Projeto da Global Solution 2026
         </p>
-        <p>Os dados de exemplo são simulados.</p>
-      </div>
+        </div>
     </footer>
   )
 }
