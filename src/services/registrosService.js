@@ -1,8 +1,3 @@
-// Camada de acesso aos dados.
-// Se VITE_API_URL estiver definida, fala com a API externa (MockAPI.io).
-// Se não estiver, usa o localStorage com a mesma interface, para o app
-// funcionar em modo demonstração sem depender de internet.
-
 const API_URL = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 const CHAVE_LOCAL = 'citizen-care:registros'
 
@@ -19,8 +14,6 @@ function normalizar(registro) {
     observacao: registro.observacao ?? '',
   }
 }
-
-/* ---------- API externa ---------- */
 
 async function pedir(caminho, opcoes = {}) {
   const resposta = await fetch(`${API_URL}${caminho}`, {
@@ -41,7 +34,6 @@ const remoto = {
   },
 }
 
-/* ---------- modo demonstração (localStorage) ---------- */
 
 const esperar = (ms = 250) => new Promise((resolve) => setTimeout(resolve, ms))
 
@@ -60,7 +52,7 @@ function lerLocal() {
     const texto = localStorage.getItem(CHAVE_LOCAL)
     if (texto) return JSON.parse(texto)
   } catch {
-    // armazenamento indisponível ou corrompido: recomeça com os exemplos
+    
   }
   const iniciais = dadosIniciais()
   gravarLocal(iniciais)
@@ -71,7 +63,7 @@ function gravarLocal(lista) {
   try {
     localStorage.setItem(CHAVE_LOCAL, JSON.stringify(lista))
   } catch {
-    // sem espaço ou bloqueado: o app continua funcionando só na sessão
+
   }
 }
 

@@ -20,12 +20,10 @@ export default function App() {
   const [emEdicao, setEmEdicao] = useState(null)
   const [aviso, setAviso] = useState(null)
 
-  // o título da aba acompanha a situação mais recente
   useEffect(() => {
     document.title = ultimo ? `${SENSACOES[ultimo.sensacao]?.rotulo} · Citizen Care` : 'Citizen Care'
   }, [ultimo])
 
-  // a mensagem some sozinha depois de alguns segundos
   useEffect(() => {
     if (!aviso) return
     const timer = setTimeout(() => setAviso(null), 4000)

@@ -73,7 +73,7 @@ npm install
 npm run dev
 
 Sem configurar nada, o app abre em **modo demonstração**: os registros ficam no `localStorage` do navegador, com quatro exemplos simulados.
-
+Configurado a API, os registros ficam no network - fetch do navegador configurados como registros
 ## Configurar a API externa (MockAPI.io)
 
 1. Crie uma conta em https://mockapi.io e um novo projeto.

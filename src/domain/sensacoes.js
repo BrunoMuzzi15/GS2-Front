@@ -1,7 +1,3 @@
-// Regras do núcleo digital: a pessoa registra como sentiu o ambiente
-// e a plataforma devolve orientações simples de prevenção.
-// (A medição automática com sensor é feita por outro módulo do projeto.)
-
 export const SENSACOES = {
   confortavel: { rotulo: 'Confortável', nivel: 'ideal', titulo: 'O ambiente está confortável' },
   calor: { rotulo: 'Com calor', nivel: 'atencao', titulo: 'O ambiente está quente' },

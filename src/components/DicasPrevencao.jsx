@@ -5,7 +5,6 @@ import { SENSACOES, dicasDa } from '../domain/sensacoes'
 export default function DicasPrevencao({ sensacaoAtual }) {
   const [escolhida, setEscolhida] = useState(sensacaoAtual ?? 'calor')
 
-  // quando chega um registro novo, as orientações acompanham a situação mais recente
   useEffect(() => {
     if (sensacaoAtual) setEscolhida(sensacaoAtual)
   }, [sensacaoAtual])

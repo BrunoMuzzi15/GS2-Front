@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import { SENSACOES } from '../domain/sensacoes'
 
-// Resume a lista de registros para o painel.
 export function useAmbiente(registros) {
   return useMemo(() => {
     const ultimo = registros[0] ?? null

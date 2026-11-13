@@ -5,7 +5,6 @@ const ESTILO = {
   alerta: 'border-alerta bg-alertaBg text-alerta',
 }
 
-// Só aparece quando o último registro indica algo que pede cuidado.
 export default function AlertaAmbiental({ ultimo }) {
   const info = ultimo ? SENSACOES[ultimo.sensacao] : null
   if (!info || info.nivel === 'ideal') return null

@@ -13,12 +13,12 @@ function ler() {
     const texto = localStorage.getItem(CHAVE)
     if (texto) return JSON.parse(texto)
   } catch {
-    // sem acesso ao armazenamento: usa a lista inicial
+  
   }
   return INICIAIS
 }
 
-// Lembretes de cuidado guardados no próprio aparelho.
+
 export function useLembretes() {
   const [lembretes, setLembretes] = useState(ler)
 
@@ -26,7 +26,7 @@ export function useLembretes() {
     try {
       localStorage.setItem(CHAVE, JSON.stringify(lembretes))
     } catch {
-      // ignora: a lista continua funcionando durante a visita
+      
     }
   }, [lembretes])
 

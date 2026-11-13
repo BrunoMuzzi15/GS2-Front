@@ -6,12 +6,11 @@ import {
   removerRegistro,
 } from '../services/registrosService'
 
-// do mais recente para o mais antigo
+
 const maisRecentesPrimeiro = (lista) =>
   [...lista].sort((a, b) => new Date(b.criadoEm) - new Date(a.criadoEm))
 
-// Guarda a lista de registros e as operações de CRUD.
-// Quem usa o hook só recebe dados e funções, sem saber de onde vêm.
+
 export function useRegistros() {
   const [registros, setRegistros] = useState([])
   const [carregando, setCarregando] = useState(true)
@@ -34,7 +33,7 @@ export function useRegistros() {
     carregar()
   }, [carregar])
 
-  // as funções abaixo deixam o erro subir para quem chamou mostrar a mensagem
+  
   async function comSalvando(operacao) {
     setSalvando(true)
     try {

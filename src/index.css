@@ -12,7 +12,6 @@
     @apply bg-mist font-sans text-ink antialiased;
   }
 
-  /* foco bem visível para quem navega pelo teclado */
   :focus-visible {
     outline: 3px solid #1b5e73;
     outline-offset: 2px;

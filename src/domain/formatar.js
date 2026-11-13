@@ -15,7 +15,6 @@ export function formatarData(iso) {
   return formatadorData.format(data)
 }
 
-// "29 °C e 38% de umidade", só com o que foi informado
 export function medidasEmTexto(registro) {
   const partes = []
   if (registro.temperatura !== null && registro.temperatura !== undefined) partes.push(`${formatarNumero(registro.temperatura)} °C`)

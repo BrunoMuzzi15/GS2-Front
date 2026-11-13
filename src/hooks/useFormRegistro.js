@@ -7,7 +7,7 @@ const comVirgula = (n) => (n === null || n === undefined ? '' : String(n).replac
 
 function lerNumero(texto) {
   const limpo = String(texto).trim().replace(',', '.')
-  if (limpo === '') return null // campo opcional
+  if (limpo === '') return null 
   return Number(limpo)
 }
 
@@ -41,12 +41,11 @@ function validar(valores) {
   return { erros, dados }
 }
 
-// Estado e validação do formulário. Serve para cadastrar e para editar.
 export function useFormRegistro({ registroEditado, aoSalvar }) {
   const [valores, setValores] = useState(VAZIO)
   const [erros, setErros] = useState({})
 
-  // quando muda o registro em edição, o formulário se reajusta
+  /
   useEffect(() => {
     setErros({})
     setValores(

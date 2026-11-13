@@ -1,7 +1,6 @@
 import { SENSACOES } from '../domain/sensacoes'
 import { formatarData } from '../domain/formatar'
 
-// Mostra como o ambiente evoluiu nos últimos registros e quantas vezes cada situação apareceu.
 export default function ResumoRegistros({ recentes, contagem, total }) {
   if (total === 0) return null
 
